@@ -17,35 +17,35 @@ Below is a list of the AI elements hat I have implemented into my game
 
 All of the enemies in my game use interception to chase the player. I also used the same method for evasion as I found it is effective at evading the player. The code I used to achieve this can be seen in the image below.
 
-![Enemy Chase](Assignment/Assignment%20Images/EnemyChaseCode.PNG)
+![Enemy Chase](Assignment%20Images/EnemyChaseCode.PNG)
 
 When the enemies are not chasing the player they move between a set of waypoints. This is the enemies default state when the game starts and they revert to it when the player moves out of there line of sight. The code I used to achieve this can be seen in the image below.
 
-![Enemy Waypoints](Assignment/Assignment%20Images/EnemyWaypointCode.PNG)
+![Enemy Waypoints](Assignment%20Images/EnemyWaypointCode.PNG)
 
 The players bullets and some of the enemy bullets (red ones) use basic Vector math to move to a static point on the screen. The code used to achieve this can be seen in the Move method in the image below.
 
 (**NB:** the variable targetPos in the Move method is set when the bullet is instantiated and does not change unlike the target.position in the Track method which is the current targets position)
 
-![EnemyBullets](Assignment/Assignment%20Images/EnemyBulletMovement.PNG)
+![EnemyBullets](Assignment%20Images/EnemyBulletMovement.PNG)
 
 There is some enemy bullets (purple ones) that use line of sight chasing to target the player and chase you until they collide with you or another in the level. The code used to achieve this can be seen in the Track method in the image above.
 The players missiles also use Line of Sight to reach their targets. 
 
-![Missile Movement](Assignment/Assignment%20Images/MissileMovement.PNG)
+![Missile Movement](Assignment%20Images/MissileMovement.PNG)
 
 ## Finite State Machines (FSM)
 
 I have used FSMs for both the enmies and the player below you can see diagrams showing how they work
 
 ### Enemy States
-![Enemy States](Assignment/Assignment%20Images/EnemyStates.png)
+![Enemy States](Assignment%20Images/EnemyStates.png)
 
-![Enemy States Code](Assignment/Assignment%20Images/EnemyStatesCode.png)
+![Enemy States Code](Assignment%20Images/EnemyStatesCode.png)
 
 ### Player States
-![Player States](Assignment/Assignment%20Images/PlayerStates.png)
+![Player States](Assignment%20Images/PlayerStates.png)
 
-![Player States Code](Assignment/Assignment%20Images/PlayerStatesCode.PNG)
+![Player States Code](Assignment%20Images/PlayerStatesCode.PNG)
 
 **NB:** The player FSM shows that the player could transition to dead from the paused state however this cannot happen because all enemies and bullets stop when the game is paused, however the transition could still theoretically happen.
